@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Meta-Universe</title>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <style>
+       @font-face {
+            font-family: 'OrbitronRegular';
+            src: url('fonts/OrbitronRegular.eot');
+            src: url('fonts/OrbitronRegular.eot') format('embedded-opentype'),
+                url('fonts/OrbitronRegular.woff2') format('woff2'),
+                url('fonts/OrbitronRegular.woff') format('woff'),
+                url('fonts/OrbitronRegular.ttf') format('truetype'),
+                url('fonts/OrbitronRegular.svg#OrbitronRegular') format('svg');
+        }
+
+        html, body {
+            /* height: 100%; */
+            margin:0;
+        }
+
+        .nuclearTextDiv, .HashRateTextDiv, .NFTTextDiv {
+            position: absolute;
+            color:white;
+            font-family: "OrbitronRegular";
+            font-size: 32px;
+            font-weight: 600;
+            line-height: 10px;
+            text-shadow: 0px 0px 20px rgb(13, 20, 87, 1);
+        }
+
+        .nuclearTextDiv {
+            top: 49%;
+            left: 25%;
+        }
+
+        .HashRateTextDiv {
+            top: 72%;
+            left: 52%;
+        }
+
+        .NFTTextDiv {
+            top: 48%;
+            left: 61.4%;
+        }
+
+        .glow {
+            visib
+            color: rgba(255, 255, 255, 1);
+            box-shadow: 0 5px 15px rgba(145, 92, 182, .4);
+        }
+
+        #c { 
+            width: 100%;
+            height: 100%;
+            display: block;
+            background: url("3D_objects/bg.svg") no-repeat;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            /* overflow: hidden; */
+        }
+
+        /* .Background {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+        } */
+
+        /* .Sky {
+            position: absolute;
+            top: 22%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border: 5px solid black;
+        } */
+
+       /* .NuclearPowerPlant {
+            position: absolute;
+            top: 53%;
+            left: 15%;
+            z-index: 999;
+        }
+
+        .HashRateMiningCenter {
+            position: absolute;
+            top: 77.5%;
+            left: 49%;
+            z-index: 999;
+        }
+
+        .NFTTokenCenter {
+            position: absolute;
+            top: 56%;
+            left: 59.8%;
+            z-index: 999;
+        } */
+
+        /* .Floor {
+            position: absolute;
+            top: 85%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border: 5px solid red;
+            z-index: 1;
+        } */
+    </style>
+
+
+</head>
+<body>
+    <canvas id="c"></canvas>
+    <script src="three.min.js"></script>
+    <script src="GLTFLoader.js"></script>
+    <script src="OrbitControls.js"></script>
+    <script src='threex.domevents.js'></script>
+    <script src="index.js" type="module"></script>
+
+    <!--<img class="Background" src="images/Background.png" alt="Background" />-->
+    <!-- <img class="Sky" src="images/Sky.svg" alt="Sky" value="2" /> -->
+
+    <div class="nuclearTextDiv">Nuclear <p>Power Plant</p></div>
+    <!-- <img class="NuclearPowerPlant" src="images/NuclearPowerPlant.png" alt="Nuclear Power Plant" value="3" /> -->
+    <div class="HashRateTextDiv">Hash Rate <p>Mining Center</p></div>
+    <!-- <img class="HashRateMiningCenter" src="images/HashRateMiningCenter.png" alt="Hash Rate Mining Center" value="3" /> -->
+    <div class="NFTTextDiv">NFT Token <p>Center</p></div>
+    <!-- <img class="NFTTokenCenter" src="images/NFTTokenCenter.png" alt="NFT Token Center" value="3" /> -->
+
+    <!-- <img class="Floor" src="images/Floor.svg" alt="Floor" value="2" /> -->
+
+    <!-- parallax functionality -->
+
+    <!--<script>
+        window.addEventListener('load', () => {
+            let sky = document.querySelector('.Sky');
+            let skyHalfWidth = sky.offsetWidth / 2;
+            let skyHalfHeight = sky.offsetHeight / 2;
+
+            let floor = document.querySelector('.Floor');
+            let floorHalfWidth = floor.offsetWidth / 2;
+            let floorHalfHeight = floor.offsetHeight / 2;
+
+            document.addEventListener("mousemove", parallax);
+            function parallax(event) {
+
+                this.querySelectorAll("img").forEach((shift) => {
+
+                    const position = shift.getAttribute("value");
+
+                    const x = (window.innerWidth - event.pageX * position) / 90;
+                    const y = (window.innerHeight - event.pageY * position) / 90;
+
+                    shift.style.transform = `translate(${-50 + ((100 * x) / floorHalfWidth)}%, ${-50 + ((100 * y) / floorHalfHeight)}%)`;
+                });
+            }
+        });
+    </script>-->
+
+</body>
+</html>
